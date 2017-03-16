@@ -1,0 +1,23 @@
+[
+  {
+    "name" : "Jose Luis Romero Dominguez",
+    "price" : "0.77",
+    "TAA" : "16",
+    "WD" : "183.12",
+    "rating" : "3.5"
+  },
+  {
+    "name" : "Daniel Jimenez Gonzalez",
+    "price" : "0.92",
+    "TAA" : "10",
+    "WD" : "64.12",
+    "rating" : "4"
+  },
+  {
+    "name" : "Irene Tello Acedo",
+    "price" : "0.99",
+    "TAA" : "9",
+    "WD" : "12.12",
+    "rating" : "3"
+  }
+]
