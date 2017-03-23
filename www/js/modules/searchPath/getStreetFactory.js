@@ -6,6 +6,8 @@ function getStreetFactory ($q, $http) {
     interfaz.getStreet = function (lat, lng) {
         var defered = $q.defer();
         var promise = defered.promise;
+        var utmObj = require('utm-latlng');
+        var obj = new utmObj();
         $http( {
             method: 'POST',
             url: 'http://localhost:7474/db/data/ext/SpatialPlugin/graphdb/findClosestGeometries',
@@ -20,7 +22,7 @@ function getStreetFactory ($q, $http) {
                     var utmStreet = [];
                     angular.forEach(latLng, function (value, key) {
                         //var utmStreet.push({x: utm.convertLatLngToUtm(value.lat, value.lng).x, y: utm.convertLatLngToUtm(value.lat, value.lng).y});
-                        console.log(convertLatLngToUtm(value.lat, value.lng));
+                        console.log('utm' + obj.convertLatLngToUtm(value.lat, value.lng).Easting);
                         console.log(value);
                     });
                     calles["p"+value] = {color: '#008000', weight: 8, latlngs: latLng};

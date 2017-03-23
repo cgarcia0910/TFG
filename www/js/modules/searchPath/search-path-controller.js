@@ -2,7 +2,7 @@
  * Created by carlos on 16/03/17.
  */
 
-function searchPathController ($scope, $q) {
+function searchPathController ($scope, $q, getStreetFactory) {
     $scope.center = {lat:39.712304, lng:-6.549675, zoom:25};
     angular.extend($scope, {
         paths : {}
@@ -18,7 +18,8 @@ function searchPathController ($scope, $q) {
 
 
     };
-    $scope.$on('leafletDirectiveMap.click', function (e, args) {
+    $scope.$on('leafletDirectiveMap.mousedown', function (e, args) {
+        //console.log("clic en mapa");
         getStreetFactory.getStreet(args.leafletEvent.latlng.lat, args.leafletEvent.latlng.lng).then(function (data) {
             //angular.extend($scope, {path : data});
             var path = data;
