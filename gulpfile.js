@@ -41,7 +41,9 @@ gulp.task('sass', function(done) {
 gulp.task('watch', function() {
   //gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.jsSrc, ['browserify']);
-  gulp.watch(paths.jsSrc, ['lint']);
+  gulp.watch(paths.jsSrc, ['lint']).on('error', function () {
+    
+  });
 });
 
 gulp.task('install', ['git-check'], function() {

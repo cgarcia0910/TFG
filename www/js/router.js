@@ -68,7 +68,8 @@ module.exports = ['$stateProvider', '$urlRouterProvider',
 	    })
 		  .state('listUser', {
 			  url:"/listUsers",
-			  template: '<driver-list></driver-list>'
+			  //template: '<address-directive current-lat="38.87789" current-lng="-6.97061" identifier="prueba"></address-directive>'
+			  template: '<search-path-component></search-path-component>'
 		  })
 
 	  ;
